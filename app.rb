@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
-require 'bundler/inline'
+require 'bundler/setup'
+require 'procon_bypass_man'
 
-gemfile do
-  gem 'procon_bypass_man', github: 'splaspla-hacker/procon_bypass_man', tag: "0.1"
-end
-
-ProconBypassMan.configure do
+ProconBypassMan.run do
   prefix_keys_for_changing_layer [:zr, :r, :zl, :l]
 
   layer :up, mode: :manual do
