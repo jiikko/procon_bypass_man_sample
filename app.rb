@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'bundler/setup'
 require 'procon_bypass_man'
-require 'procon_bypass_man-splatoon2'
+require 'procon_bypass_man/splatoon2'
 
 ProconBypassMan.tap do |pbm|
   pbm.logger = "./app.log"
