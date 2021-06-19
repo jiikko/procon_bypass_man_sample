@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/splaspla-hacker/procon_bypass_man
-  revision: 2069b2151e73a8f2da347e24fbb33bcd19ec7874
-  tag: 0.1
+  revision: d17772976ce7e7004af62d3811f70ebe36af4f6e
+  tag: 0.1.1
   specs:
-    procon_bypass_man (0.1.0)
+    procon_bypass_man (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -11,9 +11,10 @@ GEM
 
 PLATFORMS
   arm64-darwin-20
+  armv7l-linux-eabihf
 
 DEPENDENCIES
   procon_bypass_man!
 
 BUNDLED WITH
-   2.2.16
+   2.2.20
