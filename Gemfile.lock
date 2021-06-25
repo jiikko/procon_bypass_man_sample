@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/splaspla-hacker/procon_bypass_man
-  revision: d17772976ce7e7004af62d3811f70ebe36af4f6e
-  tag: 0.1.1
+  revision: ee6f188fa1ecae37d4933e74e1f1e374add5da7c
+  tag: 0.1.2
   specs:
-    procon_bypass_man (0.1.1)
+    procon_bypass_man (0.1.2)
 
 GIT
   remote: https://github.com/splaspla-hacker/procon_bypass_man-splatoon2
