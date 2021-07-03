@@ -5,10 +5,31 @@ GIT
   specs:
     procon_bypass_man-splatoon2 (0.1.0)
 
+GIT
+  remote: https://github.com/splaspla-hacker/procon_bypass_man-web
+  revision: b0b5dfc48c78fc55a2360b4ec413adf8d2a20ab2
+  specs:
+    procon_bypass_man-web (0.1.0)
+      sinatra
+      webrick
+
 GEM
   remote: https://rubygems.org/
   specs:
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
     procon_bypass_man (0.1.3)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    ruby2_keywords (0.0.4)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    tilt (2.0.10)
+    webrick (1.7.0)
 
 PLATFORMS
   arm-linux
@@ -18,6 +39,7 @@ PLATFORMS
 DEPENDENCIES
   procon_bypass_man (= 0.1.3)
   procon_bypass_man-splatoon2!
+  procon_bypass_man-web!
 
 BUNDLED WITH
    2.2.20
