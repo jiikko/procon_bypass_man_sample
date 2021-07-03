@@ -2,7 +2,6 @@
 https://github.com/splaspla-hacker/procon_bypass_man を使ったサンプルです
 
 ## インストール
-###
 ```
 git clone https://github.com/jiikko/procon_bypass_man_sample.git
 cd procon_bypass_man_sample
@@ -15,3 +14,12 @@ sudo bundle install --path vendor/bundle
 ```shell
 bundle exec sudo ruby app.rb
 ```
+
+### web からの場合
+
+* Open http://host:9090
+
+
+
+## TIPS
+* tailscaleを使うとwebインタフェイスにアクセスしやすい
