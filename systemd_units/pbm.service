@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/home/pi/src/procon_bypass_man_sample
-ExecStart=/home/pi/.rbenv/versions/3.0.1/bin/ruby /home/pi/src/procon_bypass_man_sample/app.rb
+ExecStart=/binbash -c "BUNDLE_GEMFILE=/home/pi/src/procon_bypass_man_sample /home/pi/.rbenv/versions/3.0.1/bin/ruby /home/pi/src/procon_bypass_man_sample/app.rb"
 Restart=always
 
 [Install]
