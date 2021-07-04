@@ -14,7 +14,7 @@ sudo gem i bundler
 
 ## 使い方
 ```shell
-bundle exec sudo ruby app.rb
+sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby app.rb
 ```
 
 systemdのserviceとして登録することsshが要らなくなります
