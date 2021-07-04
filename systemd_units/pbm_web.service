@@ -1,0 +1,12 @@
+[Unit]
+Description=PBM WEB
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/src/procon_bypass_man_sample
+ExecStart=sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby bundle exec pbm_server
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
