@@ -6,10 +6,11 @@ setting: |-
   install_macro_plugin fast_return
   install_mode_plugin guruguru
 
-  prefix_keys_for_changing_layer [:zr, :r, :zl, :l]
+  prefix_keys_for_changing_layer [:zr, :zl, :l]
 
   layer :up, mode: :manual do
-    flip :zr, if_pressed: :zr, force_neutral: :zl
+    # flip :zr, if_pressed: :zr, force_neutral: :zl
+    flip :zr, if_pressed: :zr, force_neutral: :zl, flip_interval: "2F"
     flip :zl, if_pressed: [:y, :b, :zl]
     flip :down, if_pressed: :down
     macro fast_return.name, if_pressed: [:y, :b, :down]
@@ -17,7 +18,11 @@ setting: |-
   end
   layer :right, mode: guruguru.name
   layer :left do
+    flip :zr, if_pressed: :zr, force_neutral: :zl
+    remap :l, to: :zr
   end
   layer :down do
-    flip :zl
+    # flip :zl
+    flip :zr, if_pressed: :zr, force_neutral: :zl, flip_interval: "1F"
+    remap :l, to: :zr
   end
