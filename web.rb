@@ -17,7 +17,7 @@ begin
 rescue Bundler::Source::Git::GitCommandError => e
   if %r!If this error persists you could try removing the cache directory '([^']+)'! =~ e.to_s
     if is_correct_directory_to_remove?($1)
-      FileUtiles.rm_rf($1)
+      FileUtils.rm_rf($1)
       puts "Bundler::Source::Git::GitCommandErrorが起きたので問題のディレクトリを削除しました。"
     else
       raise "bundlerのキャッシュディレクトリを削除できませんでした"
