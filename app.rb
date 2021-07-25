@@ -27,9 +27,9 @@ rescue Bundler::Source::Git::GitCommandError => e
 end
 
 ProconBypassMan.tap do |pbm|
+  pbm.root = File.expand_path(__dir__)
   pbm.logger = Logger.new("#{ProconBypassMan.root}/app.log", 5, 1024 * 1024 * 10)
   pbm.logger.level = :debug
-  pbm.root = File.expand_path(__dir__)
 end
 
 ProconBypassMan.run(setting_path: "./setting.yml")
