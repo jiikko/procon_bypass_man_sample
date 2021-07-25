@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
 require 'bundler/inline'
 
 def is_correct_directory_to_remove?(dir)
@@ -16,6 +15,7 @@ begin
   end
   # TODO  bundlerのバージョンを指定する
 rescue Bundler::Source::Git::GitCommandError => e
+  require 'fileutils'
   if %r!If this error persists you could try removing the cache directory '([^']+)'! =~ e.to_s
     if is_correct_directory_to_remove?($1)
       FileUtils.rm_rf($1)

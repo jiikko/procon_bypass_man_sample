@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
 require 'bundler/inline'
 
 def is_correct_directory_to_remove?(dir)
@@ -15,6 +14,7 @@ begin
     gem 'procon_bypass_man-web', github: 'splaspla-hacker/procon_bypass_man-web'
   end
 rescue Bundler::Source::Git::GitCommandError => e
+  require 'fileutils'
   if %r!If this error persists you could try removing the cache directory '([^']+)'! =~ e.to_s
     if is_correct_directory_to_remove?($1)
       FileUtils.rm_rf($1)
