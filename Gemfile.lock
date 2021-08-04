@@ -8,7 +8,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    procon_bypass_man (0.1.3)
+    procon_bypass_man (0.1.5)
 
 PLATFORMS
   arm-linux
@@ -16,7 +16,7 @@ PLATFORMS
   armv7l-linux
 
 DEPENDENCIES
-  procon_bypass_man (= 0.1.3)
+  procon_bypass_man (= 0.1.5)
   procon_bypass_man-splatoon2!
 
 BUNDLED WITH
