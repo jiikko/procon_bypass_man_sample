@@ -23,9 +23,10 @@ sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby app.rb
 sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby web.rb
 ```
 
-
-
 systemdのserviceとして登録することsshが要らなくなります
 
-### web からの場合
 * Open http://pi.local:9090
+
+## TODO
+* オフラインの時にbundler/inlineがキャッシュで完結するのか、タイムアウトはいくつなのかを確認する
+    * タイムアウトによって起動が遅くなるのであれば短くするとか、fallbackを用意する
