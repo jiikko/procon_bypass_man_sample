@@ -10,19 +10,20 @@ setting: |-
 
   layer :up, mode: :manual do
     # flip :zr, if_pressed: :zr, force_neutral: :zl
-    flip :zr, if_pressed: :zr, force_neutral: :zl, flip_interval: "2F"
+    flip :zr, if_pressed: :zr, force_neutral: :zl
     flip :zl, if_pressed: [:y, :b, :zl]
+    flip :a, if_pressed: [:a]
     flip :down, if_pressed: :down
     macro fast_return.name, if_pressed: [:y, :b, :down]
     remap :l, to: :zr
   end
   layer :right, mode: guruguru.name
   layer :left do
-    flip :zr, if_pressed: :zr, force_neutral: :zl
+  # flip :zr, if_pressed: :zr, force_neutral: :zl
     remap :l, to: :zr
   end
   layer :down do
     # flip :zl
-    flip :zr, if_pressed: :zr, force_neutral: :zl, flip_interval: "1F"
+    # flip :zr, if_pressed: :zr, force_neutral: :zl, flip_interval: "1F"
     remap :l, to: :zr
   end
