@@ -11,7 +11,7 @@ begin
     source 'https://rubygems.org'
     git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
     gem 'procon_bypass_man', github: 'splaspla-hacker/procon_bypass_man', branch: "edge"
-    gem 'procon_bypass_man-splatoon2', github: 'splaspla-hacker/procon_bypass_man-splatoon2', branch: "0.1.0"
+    gem 'procon_bypass_man-splatoon2', github: 'splaspla-hacker/procon_bypass_man-splatoon2', branch: "0.1.1"
   end
   # TODO  bundlerのバージョンを指定する
 rescue Bundler::Source::Git::GitCommandError => e
