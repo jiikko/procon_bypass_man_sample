@@ -1,17 +1,32 @@
 # procon_bypass_man_sample
-https://github.com/splaspla-hacker/procon_bypass_man を使ったサンプルです
+https://github.com/splaplapla/procon_bypass_man を使ったサンプルです
 
 ## インストール
-###
 ```
+ssh pi@pi.local
+mkdir -p ~/src
+cd ~/src
 git clone https://github.com/jiikko/procon_bypass_man_sample.git
 cd procon_bypass_man_sample
 rbenv install 3.0.1
 sudo gem i bundler
-sudo bundle install --path vendor/bundle
 ```
 
 ## 使い方
 ```shell
-bundle exec sudo ruby app.rb
+sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby app.rb
 ```
+
+### webインタフェース
+
+```shell
+sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby web.rb
+```
+
+systemdのserviceとして登録することsshが要らなくなります
+
+* Open http://pi.local:9090
+
+## TODO
+* オフラインの時にbundler/inlineがキャッシュで完結するのか、タイムアウトはいくつなのかを確認する
+    * タイムアウトによって起動が遅くなるのであれば短くするとか、fallbackを用意する

@@ -11,9 +11,8 @@ begin
     source 'https://rubygems.org'
     git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
     gem 'procon_bypass_man', github: 'splaplapla/procon_bypass_man', branch: "edge"
-    gem 'procon_bypass_man-splatoon2', github: 'splaplapla/procon_bypass_man-splatoon2', tag: "v0.1.1"
+    gem 'procon_bypass_man-web', github: 'splaplapla/procon_bypass_man-web'
   end
-  # TODO  bundlerのバージョンを指定する
 rescue Bundler::Source::Git::GitCommandError => e
   require 'fileutils'
   if %r!If this error persists you could try removing the cache directory '([^']+)'! =~ e.to_s
@@ -26,10 +25,4 @@ rescue Bundler::Source::Git::GitCommandError => e
   end
 end
 
-ProconBypassMan.tap do |pbm|
-  pbm.root = File.expand_path(__dir__)
-  pbm.logger = Logger.new("#{ProconBypassMan.root}/app.log", 5, 1024 * 1024 * 10)
-  pbm.logger.level = :debug
-end
-
-ProconBypassMan.run(setting_path: "./setting.yml")
+ProconBypassMan::Web::Server.start
