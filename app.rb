@@ -10,7 +10,7 @@ begin
   gemfile do
     source 'https://rubygems.org'
     git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-    gem 'procon_bypass_man', '0.1.6'
+    gem 'procon_bypass_man', github: 'splaplapla/procon_bypass_man', branch: "edge"
     gem 'procon_bypass_man-splatoon2', github: 'splaplapla/procon_bypass_man-splatoon2', tag: "0.1.1"
   end
   # TODO  bundlerのバージョンを指定する

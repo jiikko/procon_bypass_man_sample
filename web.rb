@@ -10,7 +10,7 @@ begin
   gemfile do
     source 'https://rubygems.org'
     git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-    gem 'procon_bypass_man-web', "0.1.0"
+    gem 'procon_bypass_man-web', github: 'splaplapla/procon_bypass_man-web', branch: "edge"
   end
 rescue Bundler::Source::Git::GitCommandError => e
   require 'fileutils'
