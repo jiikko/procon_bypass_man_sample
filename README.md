@@ -1,5 +1,5 @@
 # procon_bypass_man_sample
-https://github.com/splaspla-hacker/procon_bypass_man を使ったサンプルです
+https://github.com/splaplapla/procon_bypass_man を使ったサンプルです
 
 ## インストール
 ```
