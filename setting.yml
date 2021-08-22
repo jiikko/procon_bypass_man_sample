@@ -25,7 +25,13 @@ setting: |-
   end
   layer :right, mode: guruguru.name
   layer :left do
-  # flip :zr, if_pressed: :zr, force_neutral: :zl
+    flip :zl, if_pressed: [:y, :b, :zl]
+    flip :a, if_pressed: [:a]
+    flip :down, if_pressed: :down
+    macro fast_return.name, if_pressed: [:y, :b, :down]
+    macro ProconBypassMan::Splatoon2::Macro::JumpToUpKey, if_pressed: [:y, :b, :up]
+    macro ProconBypassMan::Splatoon2::Macro::JumpToRightKey, if_pressed: [:y, :b, :right]
+    macro ProconBypassMan::Splatoon2::Macro::JumpToLeftKey, if_pressed: [:y, :b, :left]
     remap :l, to: :zr
   end
   layer :down do
