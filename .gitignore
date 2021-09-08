@@ -1,3 +1,6 @@
 .bundle
 tmp
 vendor
+*.log
+.setting_yaml_digest
+pbm_pid
