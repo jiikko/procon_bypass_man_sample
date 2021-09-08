@@ -20,6 +20,7 @@ rescue Bundler::Source::Git::GitCommandError => e
     if is_correct_directory_to_remove?($1)
       FileUtils.rm_rf($1)
       puts "Bundler::Source::Git::GitCommandErrorが起きたので問題のディレクトリを削除しました。"
+      exit 1
     else
       raise "bundlerのキャッシュディレクトリを削除できませんでした"
     end
