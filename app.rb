@@ -31,6 +31,7 @@ ProconBypassMan.tap do |pbm|
   pbm.root = File.expand_path(__dir__)
   pbm.logger = Logger.new("#{ProconBypassMan.root}/app.log", 5, 1024 * 1024 * 10)
   pbm.logger.level = :debug
+  pbm.enable_critical_error_logging!
 end
 
 ProconBypassMan.run(setting_path: "./setting.yml")
