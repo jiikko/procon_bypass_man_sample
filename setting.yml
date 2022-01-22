@@ -17,18 +17,18 @@ setting: |-
     flip :zl, if_pressed: [:y, :b, :zl]
     flip :a, if_pressed: [:a]
     flip :down, if_pressed: :down
-    macro fast_return.name, if_pressed: [:y, :b, :down]
+    macro fast_return, if_pressed: [:y, :b, :down]
     macro ProconBypassMan::Plugin::Splatoon2::Macro::JumpToUpKey, if_pressed: [:y, :b, :up]
     macro ProconBypassMan::Plugin::Splatoon2::Macro::JumpToRightKey, if_pressed: [:y, :b, :right]
     macro ProconBypassMan::Plugin::Splatoon2::Macro::JumpToLeftKey, if_pressed: [:y, :b, :left]
     remap :l, to: :zr
   end
-  layer :right, mode: guruguru.name
+  layer :right, mode: guruguru
   layer :left do
     flip :zl, if_pressed: [:y, :b, :zl]
     flip :a, if_pressed: [:a]
     flip :down, if_pressed: :down
-    macro fast_return.name, if_pressed: [:y, :b, :down]
+    macro fast_return, if_pressed: [:y, :b, :down]
     macro ProconBypassMan::Plugin::Splatoon2::Macro::JumpToUpKey, if_pressed: [:y, :b, :up]
     macro ProconBypassMan::Plugin::Splatoon2::Macro::JumpToRightKey, if_pressed: [:y, :b, :right]
     macro ProconBypassMan::Plugin::Splatoon2::Macro::JumpToLeftKey, if_pressed: [:y, :b, :left]
