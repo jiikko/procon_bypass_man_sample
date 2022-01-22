@@ -3,7 +3,7 @@
 gemfile do
   source 'https://rubygems.org'
   git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-  gem 'procon_bypass_man', '0.1.16'
+  gem 'procon_bypass_man', '0.1.16.1'
 end
 
 ProconBypassMan.configure do |config|
