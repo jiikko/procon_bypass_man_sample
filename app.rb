@@ -1,36 +1,17 @@
 #!/usr/bin/env ruby
 
-require 'bundler/inline'
-
-def is_correct_directory_to_remove?(dir)
-  !!(%r!^/home/pi/.rbenv/versions/! =~ dir)
+gemfile do
+  source 'https://rubygems.org'
+  git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+  gem 'procon_bypass_man', '0.1.16'
 end
 
-begin
-  gemfile do
-    source 'https://rubygems.org'
-    git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-    gem 'procon_bypass_man', '0.1.6'
-    gem 'procon_bypass_man-splatoon2', github: 'splaplapla/procon_bypass_man-splatoon2', tag: "0.1.1"
-  end
-  # TODO  bundlerのバージョンを指定する
-rescue Bundler::Source::Git::GitCommandError => e
-  require 'fileutils'
-  if %r!If this error persists you could try removing the cache directory '([^']+)'! =~ e.to_s
-    if is_correct_directory_to_remove?($1)
-      FileUtils.rm_rf($1)
-      puts "Bundler::Source::Git::GitCommandErrorが起きたので問題のディレクトリを削除しました。"
-      exit 1
-    else
-      raise "bundlerのキャッシュディレクトリを削除できませんでした"
-    end
-  end
-end
-
-ProconBypassMan.tap do |pbm|
-  pbm.root = File.expand_path(__dir__)
-  pbm.logger = Logger.new("#{ProconBypassMan.root}/app.log", 5, 1024 * 1024 * 10)
-  pbm.logger.level = :debug
+ProconBypassMan.configure do |config|
+  config.root = File.expand_path(__dir__)
+  config.logger = Logger.new("#{ProconBypassMan.root}/app.log", 5, 1024 * 1024 * 10)
+  config.logger.level = :debug
+  # config.api_servers = ['https://...']
+  config.enable_critical_error_logging = true
 end
 
 ProconBypassMan.run(setting_path: "./setting.yml")
