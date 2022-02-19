@@ -17,6 +17,7 @@ sudo gem i bundler
 sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby app.rb
 ```
 
+<!--
 ### webインタフェース
 
 ```shell
@@ -26,3 +27,5 @@ sudo /home/pi/.rbenv/versions/3.0.1/bin/ruby web.rb
 systemdのserviceとして登録することsshが要らなくなります
 
 * Open http://pi.local:9090
+
+-->
