@@ -9,7 +9,7 @@ cd ~/src
 git clone https://github.com/jiikko/procon_bypass_man_sample.git
 cd procon_bypass_man_sample
 rbenv install 3.0.1
-sudo gem i bundler
+gem i bundler
 ```
 
 ## 使い方
