@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
-
-require "bundler/inline"
+require 'bundler/inline'
 
 begin
   gemfile do
     source 'https://rubygems.org'
     git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-    gem 'procon_bypass_man', '0.2.0'
+    gem 'procon_bypass_man', '0.2.1'
   end
 rescue Bundler::Source::Git::GitCommandError => e
   # install中に強制終了するとgitの管理ファイルが不正状態になり、次のエラーが起きるので発生したらcache directoryを削除する
@@ -20,7 +19,7 @@ end
 
 ProconBypassMan.configure do |config|
   config.root = File.expand_path(__dir__)
-  config.logger = Logger.new("#{ProconBypassMan.root}/app.log", 5, 1024 * 1024 * 10)
+  config.logger = Logger.new("#{ProconBypassMan.root}/app.log", 1, 1024 * 1024 * 1)
   config.logger.level = :debug
 
   # バイパスするログを全部app.logに流すか
@@ -42,9 +41,8 @@ ProconBypassMan.configure do |config|
   config.enable_home_led_on_connect = true
 
   # 操作が高頻度で固まるときは、 gadget_to_procon_interval の数値を大きくしてください
-  config.bypass_mode = { mode: :normal, gadget_to_procon_interval: 5 }
+  config.bypass_mode = { mode: :normal, gadget_to_procon_interval: 10 }
 end
-
 
 
 ProconBypassMan.run(setting_path: "./setting.yml")
