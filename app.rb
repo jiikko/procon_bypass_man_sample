@@ -57,4 +57,4 @@ ProconBypassMan.configure do |config|
   config.bypass_mode = { mode: :normal, gadget_to_procon_interval: 10 }
 end
 
-ProconBypassMan.run(setting_path: "/usr/share/pbm/current/setting.yml")
+ProconBypassMan.run(setting_path: "./setting.yml")
