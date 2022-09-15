@@ -12,7 +12,7 @@ begin
   gemfile do
     source 'https://rubygems.org'
     git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-    gem 'procon_bypass_man', '0.2.2'
+    gem 'procon_bypass_man', '0.3.0'
   end
 rescue Bundler::Source::Git::GitCommandError => e
   retry_count_on_git_command_error = retry_count_on_git_command_error + 1
@@ -47,14 +47,8 @@ ProconBypassMan.configure do |config|
   # pbm-cloudで使う場合はnever_exitにtrueをセットしてください. trueがセットされている場合、不慮の事故が発生してもプロセスが終了しなくなります
   config.never_exit_accidentally = true
 
-  # 毎秒行ったIOをログに出力するか
-  config.io_monitor_logging = false
-
   # 接続に成功したらコントローラーのHOME LEDを光らせるか
   config.enable_home_led_on_connect = true
-
-  # 操作が高頻度で固まるときは、 gadget_to_procon_interval の数値を大きくしてください
-  config.bypass_mode = { mode: :normal, gadget_to_procon_interval: 10 }
 end
 
 ProconBypassMan.run(setting_path: "./setting.yml")
