@@ -4,8 +4,6 @@
 ```shell
 sudo ln -s /home/pi/src/procon_bypass_man_sample/systemd_units/pbm.service /etc/systemd/system/pbm.service
 sudo systemctl enable pbm.service
-sudo ln -s /home/pi/src/procon_bypass_man_sample/systemd_units/pbm_web.service /etc/systemd/system/pbm_web.service
-sudo systemctl enable pbm_web.service
 ```
 
 他の操作
